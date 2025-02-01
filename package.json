@@ -1,0 +1,21 @@
+{
+  "name": "api-rest-clean-architecture-node",
+  "module": "src/main.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun --watch src/main.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/express": "^5.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "env-var": "^7.5.0",
+    "express": "^4.21.2",
+    "hono": "^4.6.20"
+  }
+}
