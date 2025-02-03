@@ -1,4 +1,4 @@
-import express, { Router } from "express";
+import express, { json, Router, urlencoded } from "express";
 interface Options {
   port: number;
   routes: Router;
@@ -13,6 +13,8 @@ export class AppModule {
   }
 
   async start() {
+    this.app.use(json());
+    this.app.use(urlencoded({ extended: true }));
     this.app.use(this.routes);
     this.app.listen(this.port, () => {
       console.log(`Servidor corriendo por http://localhost:${this.port}`);

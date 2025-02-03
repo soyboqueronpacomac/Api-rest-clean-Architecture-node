@@ -13,4 +13,3 @@ function main() {
   });
   app.start();
 }
-
